@@ -1,0 +1,342 @@
+$webYellow: #fcdb5a;
+$webGrey: #2e2e2e;
+
+.footer {
+
+    display: flex;
+    background-color: $webGrey;
+    overflow: hidden;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 30px;
+
+    @media (min-width: 1230px) {
+        flex-direction: row;
+        align-items: stretch;
+        padding-top: 0px;
+    }
+
+
+    // .footer__content
+
+    &__container {
+        max-width: 1200px;
+        padding: 0 60px;
+        margin: 0 auto;
+        @media (max-width: 768px) {
+            padding: 0 15px;
+        }
+    }
+
+    &__content {
+        color: #b6b6b6;
+        flex: 0 0 100%;
+        padding: 70px 0 30px 0;
+        width: 100%;
+
+        
+        @media (max-width: 576px) {
+            padding: 40px 0 15px 0;
+        }
+    }
+
+    // .footer__map
+
+    &__map {
+
+        @media (min-width: 1230px) {
+            flex: 0 0 50%;
+            transform: translate(-64%, 0);
+            max-height: 503px;
+        }
+        @media (max-width: 1230px) {
+            padding: 15px;
+        }
+        
+        
+        img {
+            max-width: 100%;
+        }
+
+    }
+}
+.footer-content {
+
+    // .footer-content__top
+
+    &__top {
+        display: flex;
+        margin-bottom: 55px;
+        justify-content: space-between;
+
+        @media (min-width: 1230px) {
+            justify-content: space-between;
+            max-width: 670px;
+        }
+        
+        @media (max-width: 576px) {
+            justify-content: start;
+        }
+
+        @media (max-width: 515px) {
+            justify-content: space-between;
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: 365px) {
+                flex-direction: column;
+                align-items: center;
+        }
+        
+        
+    }
+
+    // .footer-content__bottom
+
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+        
+        border-bottom: 1px solid #414141;
+        padding-bottom: 55px;
+        margin-bottom: 35px;
+
+        @media (min-width: 1230px) {
+            max-width: 670px;
+        }
+
+        @media (max-width: 695px) {
+            flex-direction: column;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+        
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        @media (min-width: 1230px) {
+            max-width: 670px;
+        }
+
+        
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            
+            p {
+                font-size: 17px;
+                line-height: 20px;
+            }
+        }
+
+        
+       
+
+        p {
+            color: #b6b6b6;
+            font-size: 13px;
+            line-height: 13px;
+        }
+    }
+}
+.footer-top {
+
+    
+    // .footer-top__logo
+
+    &__logo {
+       
+    }
+
+    // .footer-top__nav
+
+    &__nav {
+        display: flex;
+
+        @media (max-width: 515px) {
+            flex-direction: column;
+        }
+    }
+}
+.footer-logo {
+
+    // .footer-logo__link
+
+    &__link {
+        display: block;
+        background-color: $webYellow;
+        padding: 27px 23px;
+        transition: 0.3s;
+
+        &:hover {
+            border-radius: 13px;
+            
+        }
+    }
+}
+.footer-nav {
+
+    // .footer-nav__list
+
+    &__list {
+        margin: 0 40px;
+        font-size: 0;
+
+        @media (max-width: 515px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 365px) {
+            margin: 20px 0 5px 0;
+            text-align: center;
+        }
+    }
+
+    // .footer-nav__link
+
+    &__link {
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 14px; 
+        cursor: pointer; 
+        transition: 0.3s;
+        position: relative;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover{
+            color: #fff;
+           
+        }
+
+        &._active {
+            color: #fff;
+            display: inline-block;
+            
+            &:after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: $webYellow;
+                position: absolute;
+                bottom: -5px;
+
+            }
+        }
+    }
+}
+.footer-contacts {
+
+    // .footer-contacts__email
+
+    &__email {
+        
+        @media (max-width: 695px) {
+            margin-bottom: 25px;   
+        }
+    }
+
+    // .footer-contacts__phone
+
+    &__phone {
+        a {
+            margin-right: 15px;
+
+            @media (max-width: 768px) {
+                margin-right: 15px;
+            }
+            
+        }
+    }
+
+    &__link {
+        color: #b6b6b6;
+        transition: 0.3s;
+
+        &:hover {
+            color: #fff;
+
+        }
+
+        @media (max-width: 768px) {
+            font-size: 17px;
+        }
+    }
+
+    // .footer-contacts__links
+
+    &__links {
+
+        font-size: 0;
+        display: flex;
+        margin-top: 30px;
+
+
+        a{
+            display: block;
+            width: 22px;
+            height: 22px;
+            margin-left: 5px;
+            border-radius: 50%;
+            transition: 0.3s;
+            @media (max-width: 768px) {
+                width: 30px;
+                height: 30px;
+            }
+
+
+        }
+        
+        @media (max-width: 462px) {
+            justify-content: center;
+        }
+        
+        & a:nth-child(1) {
+            background: url(../img/footer/tw.png) no-repeat center;
+            background-size: contain;
+            &:hover {
+                background-color: $webYellow;
+            }
+        }
+        & a:nth-child(2) {
+            background: url(../img/footer/fb.png) no-repeat center;
+            background-size: contain;
+            &:hover {
+                background-color: $webYellow;
+            }
+        }
+        & a:nth-child(3) {
+            background: url(../img/footer/in.png) no-repeat center;
+            background-size: contain;
+            &:hover {
+                background-color: $webYellow;
+            }
+        }
+       
+    }
+
+    &__text {
+        color: $webYellow;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 12px;
+        font-family: Raleway;
+        font-weight: 700;
+        margin-bottom: 15px;
+
+        
+        @media (max-width: 768px) {
+            margin-bottom: 10px; 
+            font-size: 18px;  
+        }
+    }
+}
