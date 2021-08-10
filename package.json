@@ -1,10 +1,14 @@
 {
-  "name": "project",
+  "name": "agro",
   "version": "1.0.0",
-  "description": "gulp-project",
-  "main": "index.js",
+  "description": "",
+  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "-"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +29,5 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "node-sass": "^5.0.0"
-  },
-  "dependencies": {}
+  }
 }
