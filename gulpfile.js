@@ -1,26 +1,25 @@
-var gulp        = require('gulp'),
-    browserSync = require('browser-sync').create(),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    Del = require('del'),
-    gcmq = require('gulp-group-css-media-queries'),
-    cleanCSS = require('gulp-clean-css'),
-    rename = require("gulp-rename"),
-    uglify = require('gulp-uglify'),
-    ttf2woff = require('gulp-ttf2woff'),
-    ttf2woff2 = require('gulp-ttf2woff2'),
-    babel = require("gulp-babel"),
-    fileinclude = require('gulp-file-include');
+var gulp = require('gulp'),
+  browserSync = require('browser-sync').create(),
+  sass = require('gulp-sass')(require('sass')),
+  autoprefixer = require('gulp-autoprefixer'),
+  Del = require('del'),
+  gcmq = require('gulp-group-css-media-queries'),
+  cleanCSS = require('gulp-clean-css'),
+  rename = require("gulp-rename"),
+  uglify = require('gulp-uglify'),
+  // ttf2woff = require('gulp-ttf2woff'),
+  // ttf2woff2 = require('gulp-ttf2woff2'),
+  babel = require("gulp-babel"),
+  fileinclude = require('gulp-file-include');
 
-
-function css () {
+function css() {
   return gulp.src('#src/scss/style.scss')
     .pipe(sass({
       outputStyle: 'expanded'
     }))
     .pipe(gcmq())
     .pipe(autoprefixer({
-      overrideBrowserslist: ["last 5 version" ],
+      overrideBrowserslist: ["last 5 version"],
       cascade: true
     }))
     .pipe(gulp.dest('dist/css'))
@@ -33,14 +32,14 @@ function css () {
 }
 
 
-function html () {
+function html() {
   return gulp.src('#src/*.html')
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.stream());
 }
 
 
-function js () {
+function js() {
   return gulp.src('#src/js/script.js')
     .pipe(fileinclude())
     .pipe(babel({
@@ -61,31 +60,31 @@ function js () {
 }
 
 
-function img () {
-    browserSync.stream();
+function img() {
+  browserSync.stream();
 }
 
-function fonts () {
-    // gulp.src('#src/fonts/*.ttf')
-    // .pipe(ttf2woff())
-    // .pipe(gulp.dest('dist/fonts'))
-    // return gulp.src('#src/fonts/*.ttf')
-    // .pipe(ttf2woff2())
-    // .pipe(gulp.dest('dist/fonts'))
-    browserSync.stream();
+function fonts() {
+  // gulp.src('#src/fonts/*.ttf')
+  // .pipe(ttf2woff())
+  // .pipe(gulp.dest('dist/fonts'))
+  // return gulp.src('#src/fonts/*.ttf')
+  // .pipe(ttf2woff2())
+  // .pipe(gulp.dest('dist/fonts'))
+  browserSync.stream();
 }
 
 
-function reload () {
+function reload() {
   browserSync.init({
     server: "dist",
-    port:3001,
-    notify:false
+    port: 3001,
+    notify: false
   })
 }
 
 
-function watch () {
+function watch() {
   gulp.watch('#src/*.html', html);
   gulp.watch('#src/scss/**/*.scss', css);
   gulp.watch('#src/js/**/*.js', js);
@@ -94,8 +93,8 @@ function watch () {
 }
 
 
-function del () {
-    return Del(['dist/**', '!dist/img', '!dist/fonts']);
+function del() {
+  return Del(['dist/**', '!dist/img', '!dist/fonts']);
 }
 
 exports.fonts = fonts;
