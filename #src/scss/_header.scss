@@ -7,7 +7,7 @@ $webYellow: #fcdb5a;
     position: relative;
     align-items: center;
     z-index: 4;
-    
+
 
     span {
         display: block;
@@ -17,7 +17,8 @@ $webYellow: #fcdb5a;
         transition: 0.3s;
     }
 
-    &:after, &:before {
+    &:after,
+    &:before {
         content: '';
         position: absolute;
         display: block;
@@ -27,12 +28,12 @@ $webYellow: #fcdb5a;
         transition: 0.3s;
     }
 
-    &:after{
+    &:after {
         bottom: 4px;
     }
 
     &:before {
-        top:4px;
+        top: 4px;
     }
 
     &._active {
@@ -44,21 +45,22 @@ $webYellow: #fcdb5a;
             background-color: #1b1b1b;
         }
 
-        &:after, &:before {
+        &:after,
+        &:before {
             background-color: #1b1b1b;
         }
 
-        &:after{
+        &:after {
             transform: translate(0, -10px) rotate(45deg);
         }
-    
+
         &:before {
             transform: translate(0, 10px) rotate(-45deg);
         }
     }
 
     @media (max-width: 768px) {
-        display: flex;       
+        display: flex;
     }
 }
 
@@ -68,68 +70,70 @@ $webYellow: #fcdb5a;
 
     &__top {
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
         @media (max-width: 768px) {
             &:after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 70px;
-            position: absolute;
-            top: 0;
-            z-index: 3;
-            background-color: transparent;
-            transition: 0.3s;
-            }   
+                content: '';
+                display: block;
+                width: 100%;
+                height: 70px;
+                position: absolute;
+                top: 0;
+                z-index: 3;
+                background-color: transparent;
+                transition: 0.3s;
+            }
         }
+
         &._active {
+
             //position: fixed;
             &:after {
                 background-color: $webYellow;
                 position: fixed;
-            }     
+            }
         }
     }
 
     // .header__bottom
 
-    &__bottom {
-
-    }
+    &__bottom {}
 }
+
 .header-top {
 
-	// .header-top__content
+    // .header-top__content
 
-	&__content {
+    &__content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 105px;
         position: relative;
+
         @media (max-width: 992px) {
             height: 70px;
         }
-        @media (max-width: 768px) {
 
-        }
-	}
+        @media (max-width: 768px) {}
+    }
 
-	// .header-top__burger
+    // .header-top__burger
 
-	&__burger {
-
-	}
+    &__burger {}
 
     // .header-top__logo
 
     &__logo {
         position: absolute;
         top: 0;
+
         @media (max-width: 768px) {
             left: 50%;
             transform: translate(-50%, 0);
             z-index: 4;
         }
+
         &._active {
             position: fixed;
         }
@@ -139,9 +143,11 @@ $webYellow: #fcdb5a;
 
     &__nav {
         margin-left: 170px;
+
         @media (max-width: 992px) {
             margin-left: 130px;
         }
+
         @media (max-width: 768px) {
             margin: 70px 0 0 0;
             width: 100%;
@@ -165,18 +171,19 @@ $webYellow: #fcdb5a;
 
     &__btn {
 
-        &._active {
-           position: relative;
-            z-index: 4;
+        position: relative;
+        z-index: 4;
 
+        &._active {
             & .btn {
                 color: #fff;
                 background-color: #424242;
-            } 
+            }
         }
-             
+
     }
 }
+
 .header-logo {
 
     // .header-logo__link
@@ -186,6 +193,7 @@ $webYellow: #fcdb5a;
         justify-content: center;
         padding: 23px 21px;
         background-color: $webYellow;
+
         @media (max-width: 992px) {
             padding: 15px 11px;
 
@@ -194,20 +202,21 @@ $webYellow: #fcdb5a;
                 height: 75%;
             }
         }
+
         @media (max-width: 768px) {
             padding: 7px 0;
-            
+
             &._active {
-                 background-color: transparent;
-                 
-                 
+                background-color: transparent;
+
+
             }
 
             img {
-                
+
                 width: 70%;
                 height: 70%;
-                
+
             }
         }
     }
@@ -219,6 +228,7 @@ $webYellow: #fcdb5a;
 
     &__list {
         display: flex;
+
         @media (max-width: 768px) {
             margin-top: 30px;
             flex-direction: column;
@@ -238,12 +248,15 @@ $webYellow: #fcdb5a;
         a {
             color: #fff;
             transition: .3s;
+
             &:hover {
                 color: $webYellow;
             }
         }
+
         ._active {
             color: $webYellow;
+
             &:after {
                 content: '';
                 display: block;
@@ -252,11 +265,13 @@ $webYellow: #fcdb5a;
                 background-color: $webYellow;
                 position: relative;
                 top: 41px;
+
                 @media (max-width: 992px) {
                     top: 23px;
                 }
             }
         }
+
         @media (max-width: 768px) {
             margin: 0 0 35px 0;
 
@@ -268,9 +283,10 @@ $webYellow: #fcdb5a;
 
             ._active {
                 color: #1b1b1b;
+
                 &:after {
                     content: '';
-                    display: none;             
+                    display: none;
                 }
             }
         }
@@ -283,34 +299,37 @@ $webYellow: #fcdb5a;
 
     &__title {
         margin: 190px 0 180px 0;
-        max-width: 450px; 
+        max-width: 450px;
         font-family: Storytella;
         font-weight: 400;
         font-size: 200px;
-        line-height: 220px;  
+        line-height: 220px;
         cursor: default;
-        
+
         @media (max-width: 992px) {
             margin: 130px 0 130px 0;
         }
+
         @media (max-width: 768px) {
             font-size: 150px;
             line-height: 150px;
             margin: 100px 0 100px 0;
         }
+
         @media (max-width: 576px) {
             margin: 50px 0 50px 0;
             font-size: 100px;
             line-height: 100px;
             max-width: 300px;
         }
-        
+
 
         a {
-            color:#fff;
+            color: #fff;
             transition: 0.3s;
+
             &:hover {
-                color:$webYellow;
+                color: $webYellow;
             }
         }
     }
