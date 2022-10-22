@@ -85,6 +85,10 @@
   top: 4px;
 }
 
+.burger._active {
+  position: fixed;
+}
+
 .burger._active span {
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
@@ -1108,8 +1112,6 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
-  -ms-touch-action: none;
-      touch-action: none;
 }
 
 .about-slide__quote {
